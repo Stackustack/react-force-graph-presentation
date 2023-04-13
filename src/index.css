@@ -21,3 +21,37 @@ body {
   min-width: 320px;
   min-height: 100vh;
 }
+
+.tooltip {
+  display: flex;
+  max-width: 220px;
+  flex-direction: column;
+  padding: 16px;
+  border-radius: 4px;
+  background-color: rgb(54, 52, 52);
+  box-shadow: none;
+  color: rgb(231, 231, 231);
+}
+
+.tooltip__header {
+  font-size: 30px;
+}
+
+.tooltip__data-list {
+  display: flex;
+  flex-direction: column;
+  padding: 0;
+  margin: 12px 0 0;
+  gap: 8px;
+}
+
+.tooltip__data-list__item {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  gap: 18px;
+}
+
+.tooltip__data-list__item__value {
+  margin: 0;
+}

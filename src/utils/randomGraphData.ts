@@ -1,3 +1,6 @@
+import { faker } from "@faker-js/faker";
+import _ from "lodash";
+
 interface RandomGraphDataParams {
   numOfElements?: number;
 }
@@ -6,7 +9,12 @@ export const randomGraphData = ({
   numOfElements = 100,
 }: RandomGraphDataParams) => {
   const gData = {
-    nodes: [...Array(numOfElements).keys()].map((i) => ({ id: i })),
+    nodes: [...Array(numOfElements).keys()].map((i) => ({
+      id: i,
+      label: faker.commerce.product(),
+      hypeLevel: _.random(1, 100),
+      noOfUser: _.random(100, 2000),
+    })),
     links: [...Array(numOfElements).keys()]
       .filter((id) => id)
       .map((id) => ({
