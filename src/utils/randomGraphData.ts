@@ -12,7 +12,7 @@ export const randomGraphData = ({
     nodes: [...Array(numOfElements).keys()].map((i) => ({
       id: i,
       label: faker.commerce.product(),
-      hypeLevel: _.random(1, 100),
+      hypeLevel: _.random(10, 20),
       noOfUser: _.random(100, 2000),
     })),
     links: [...Array(numOfElements).keys()]
